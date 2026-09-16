@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>TP10 JUAN BARACCHINI</title>
+    </head>
+    <body>
+        <h1>PRACTICA TP 10</h1>
+        <div id="MascotaVirtual"></div>
+
+        <script>
+            class Mascotas {
+                constructor(nombre, color, tipo) { 
+                    this.nombre = nombre; 
+                    this.color = color;
+                    this.tipo = tipo; 
+                }
+   
+                saludar() {
+                    return `Hola soy ${this.nombre}, mi color es ${this.color}, mi tipo es${this.tipo}`;
+                }
+            }
+
+            let mascota1 = new Mascotas("Elaia", "rosa", "cerdito");
+            let mascota2 = new Mascotas("Mateo", "celeste", "perro");
+            
+            document.getElementById("MascotaVirtual").innerHTML = `<p>${mascota1.saludar()}</p><p>${mascota2.saludar()}</p>`;
+        </script>
+    </body>
+</html>
